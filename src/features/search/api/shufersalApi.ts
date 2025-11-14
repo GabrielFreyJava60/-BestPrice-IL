@@ -14,7 +14,7 @@ interface ShufersalResponse {
 
 export const searchShufersal = async (query: string): Promise<Product[]> => {
   try {
-    const url = `https://www.shufersal.co.il/online/web/product/search?searchTerm=${encodeURIComponent(query)}`;
+    const url = `https:
     
     const data = await apiClient.get<ShufersalResponse>(url, {
       headers: {

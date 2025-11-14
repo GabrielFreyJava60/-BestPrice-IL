@@ -15,17 +15,6 @@ export default function WetGlassSettingsScreen() {
   return (
     <WetGlassBackground>
       <SafeAreaView style={styles.container}>
-        {/* Header */}
-        <View style={styles.header}>
-          <Text style={styles.title}>הגדרות</Text>
-        </View>
-
-        <ScrollView
-          style={styles.scrollView}
-          contentContainerStyle={styles.scrollContent}
-          showsVerticalScrollIndicator={false}
-        >
-          {/* Notifications Section */}
           <WetGlassCard borderRadius={24} padding={20} style={styles.card}>
             <View style={styles.sectionHeader}>
               <Ionicons name="notifications-outline" size={24} color={WetGlassTheme.colors.neon.cyan} />
@@ -55,27 +44,6 @@ export default function WetGlassSettingsScreen() {
             </View>
           </WetGlassCard>
 
-          {/* Appearance Section */}
-          <WetGlassCard borderRadius={24} padding={20} style={styles.card}>
-            <View style={styles.sectionHeader}>
-              <Ionicons name="color-palette-outline" size={24} color={WetGlassTheme.colors.neon.purple} />
-              <Text style={styles.sectionTitle}>מראה</Text>
-            </View>
-            
-            <View style={styles.settingRow}>
-              <View style={styles.settingInfo}>
-                <Text style={styles.settingLabel}>מצב כהה</Text>
-                <Text style={styles.settingDescription}>ערכת נושא כהה</Text>
-              </View>
-              <LiquidToggle
-                value={darkMode}
-                onValueChange={setDarkMode}
-                activeColor={WetGlassTheme.colors.neon.purple}
-              />
-            </View>
-          </WetGlassCard>
-
-          {/* Language Section */}
           <WetGlassCard borderRadius={24} padding={20} style={styles.card}>
             <View style={styles.sectionHeader}>
               <Ionicons name="language-outline" size={24} color={WetGlassTheme.colors.neon.blue} />
@@ -99,119 +67,4 @@ export default function WetGlassSettingsScreen() {
               </TouchableOpacity>
             ))}
           </WetGlassCard>
-
-          {/* Pro Section */}
-          <WetGlassCard
-            borderRadius={24}
-            padding={20}
-            style={styles.card}
-            glowColor={WetGlassTheme.colors.neon.pink}
-          >
-            <View style={styles.proSection}>
-              <Ionicons name="star" size={32} color={WetGlassTheme.colors.neon.pink} />
-              <Text style={styles.proTitle}>שדרג ל-Pro</Text>
-              <Text style={styles.proDescription}>
-                הסר פרסומות • רשימות בלתי מוגבלות • היסטוריית מחירים
-              </Text>
-              <TouchableOpacity style={styles.proButton} activeOpacity={0.8}>
-                <Text style={styles.proButtonText}>התחל עכשיו</Text>
-              </TouchableOpacity>
-            </View>
-          </WetGlassCard>
-        </ScrollView>
-      </SafeAreaView>
-    </WetGlassBackground>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  header: {
-    paddingHorizontal: WetGlassTheme.spacing.lg,
-    paddingTop: WetGlassTheme.spacing.md,
-    paddingBottom: WetGlassTheme.spacing.md,
-  },
-  title: {
-    ...WetGlassTheme.typography.h1,
-  },
-  scrollView: {
-    flex: 1,
-  },
-  scrollContent: {
-    paddingHorizontal: WetGlassTheme.spacing.lg,
-    paddingBottom: WetGlassTheme.spacing.xl,
-  },
-  card: {
-    marginBottom: WetGlassTheme.spacing.md,
-  },
-  sectionHeader: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginBottom: WetGlassTheme.spacing.md,
-    gap: WetGlassTheme.spacing.sm,
-  },
-  sectionTitle: {
-    ...WetGlassTheme.typography.h3,
-  },
-  settingRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingVertical: WetGlassTheme.spacing.md,
-    borderBottomWidth: 1,
-    borderBottomColor: 'rgba(255, 255, 255, 0.1)',
-  },
-  settingInfo: {
-    flex: 1,
-    marginRight: WetGlassTheme.spacing.md,
-  },
-  settingLabel: {
-    ...WetGlassTheme.typography.body,
-    marginBottom: 4,
-  },
-  settingDescription: {
-    ...WetGlassTheme.typography.caption,
-    color: WetGlassTheme.colors.text.tertiary,
-  },
-  languageOption: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingVertical: WetGlassTheme.spacing.md,
-    borderBottomWidth: 1,
-    borderBottomColor: 'rgba(255, 255, 255, 0.1)',
-  },
-  languageText: {
-    ...WetGlassTheme.typography.body,
-  },
-  proSection: {
-    alignItems: 'center',
-    paddingVertical: WetGlassTheme.spacing.md,
-  },
-  proTitle: {
-    ...WetGlassTheme.typography.h2,
-    marginTop: WetGlassTheme.spacing.sm,
-    marginBottom: WetGlassTheme.spacing.xs,
-  },
-  proDescription: {
-    ...WetGlassTheme.typography.caption,
-    textAlign: 'center',
-    marginBottom: WetGlassTheme.spacing.lg,
-    color: WetGlassTheme.colors.text.secondary,
-  },
-  proButton: {
-    backgroundColor: WetGlassTheme.colors.neon.pink,
-    paddingHorizontal: WetGlassTheme.spacing.xl,
-    paddingVertical: WetGlassTheme.spacing.md,
-    borderRadius: 20,
-    ...WetGlassTheme.shadows.neon,
-  },
-  proButtonText: {
-    ...WetGlassTheme.typography.body,
-    fontWeight: '600',
-    color: '#FFFFFF',
-  },
-});
 

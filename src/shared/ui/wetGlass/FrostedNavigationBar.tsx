@@ -24,10 +24,6 @@ export function FrostedNavigationBar({
 }: FrostedNavigationBarProps) {
   return (
     <View style={styles.container}>
-      {/* Liquid reflection line */}
-      <View style={styles.reflectionLine} />
-      
-      {/* Glass bar */}
       <BlurView intensity={60} tint="dark" style={styles.blur}>
         <LinearGradient
           colors={[
@@ -39,10 +35,6 @@ export function FrostedNavigationBar({
           end={{ x: 1, y: 0 }}
           style={styles.gradient}
         >
-          {/* Top border with neon accent */}
-          <View style={styles.topBorder} />
-          
-          {/* Tabs */}
           <View style={styles.tabs}>
             {tabs.map((tab) => {
               const isActive = activeTab === tab.name;

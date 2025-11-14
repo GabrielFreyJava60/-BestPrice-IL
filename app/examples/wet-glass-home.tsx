@@ -52,13 +52,6 @@ export default function WetGlassHomeScreen() {
   return (
     <WetGlassBackground>
       <SafeAreaView style={styles.container}>
-        {/* Header */}
-        <View style={styles.header}>
-          <Text style={styles.title}>PriceCompare IL</Text>
-          <Text style={styles.subtitle}>השווה מחירים בין רשתות</Text>
-        </View>
-
-        {/* Search Bar */}
         <View style={styles.searchContainer}>
           <LiquidSearchBar
             placeholder="חפש מוצר..."
@@ -66,13 +59,6 @@ export default function WetGlassHomeScreen() {
           />
         </View>
 
-        {/* Content */}
-        <ScrollView
-          style={styles.scrollView}
-          contentContainerStyle={styles.scrollContent}
-          showsVerticalScrollIndicator={false}
-        >
-          {/* Popular Products Section */}
           <View style={styles.section}>
             <Text style={styles.sectionTitle}>מוצרים פופולריים</Text>
             {mockProducts.map((product) => (
@@ -87,16 +73,6 @@ export default function WetGlassHomeScreen() {
           </View>
         </ScrollView>
 
-        {/* Floating Action Button */}
-        <View style={styles.fabContainer}>
-          <FloatingActionButton
-            icon="add"
-            label="הוסף"
-            onPress={() => console.log('FAB pressed')}
-          />
-        </View>
-
-        {/* Bottom Navigation */}
         <FrostedNavigationBar
           tabs={tabs}
           activeTab={activeTab}

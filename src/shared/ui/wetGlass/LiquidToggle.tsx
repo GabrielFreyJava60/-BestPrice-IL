@@ -63,10 +63,6 @@ export function LiquidToggle({
     >
       <Animated.View style={[styles.track, containerStyle]}>
         <BlurView intensity={20} tint="dark" style={styles.blur}>
-          {/* Reflection */}
-          <View style={styles.reflection} />
-          
-          {/* Animated thumb */}
           <Animated.View style={[styles.thumb, animatedStyle]}>
             <LinearGradient
               colors={[
@@ -78,65 +74,3 @@ export function LiquidToggle({
               end={{ x: 1, y: 1 }}
               style={styles.thumbGradient}
             >
-              {/* Thumb highlight */}
-              <View style={styles.thumbHighlight} />
-            </LinearGradient>
-          </Animated.View>
-        </BlurView>
-      </Animated.View>
-    </TouchableOpacity>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    width: 52,
-    height: 32,
-  },
-  track: {
-    width: '100%',
-    height: '100%',
-    borderRadius: 16,
-    overflow: 'hidden',
-    borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.2)',
-  },
-  blur: {
-    width: '100%',
-    height: '100%',
-    position: 'relative',
-  },
-  reflection: {
-    position: 'absolute',
-    top: 0,
-    left: '30%',
-    width: '40%',
-    height: '30%',
-    backgroundColor: 'rgba(255, 255, 255, 0.2)',
-    borderRadius: 8,
-    opacity: 0.6,
-  },
-  thumb: {
-    width: 24,
-    height: 24,
-    borderRadius: 12,
-    margin: 4,
-    overflow: 'hidden',
-    ...WetGlassTheme.shadows.glass,
-  },
-  thumbGradient: {
-    width: '100%',
-    height: '100%',
-    position: 'relative',
-  },
-  thumbHighlight: {
-    position: 'absolute',
-    top: '20%',
-    left: '25%',
-    width: '50%',
-    height: '30%',
-    backgroundColor: 'rgba(255, 255, 255, 0.5)',
-    borderRadius: 4,
-  },
-});
-

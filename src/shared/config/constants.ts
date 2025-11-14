@@ -1,7 +1,7 @@
 export const API_ENDPOINTS = {
-  SHUFERSAL: 'https://www.shufersal.co.il/online/web/product/search',
-  RAMI_LEVY: 'https://www.rami-levy.co.il/api/catalog/search',
-  VICTORY: 'https://api.victory.co.il/api/products/search',
+  SHUFERSAL: 'https:
+  RAMI_LEVY: 'https:
+  VICTORY: 'https:
 };
 
 export const APP_CONFIG = {

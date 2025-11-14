@@ -22,31 +22,6 @@ export function FloatingActionButton({
 }: FloatingActionButtonProps) {
   return (
     <View style={styles.container}>
-      {/* Outer glow rings */}
-      <View
-        style={[
-          styles.glowRing1,
-          {
-            width: size + 16,
-            height: size + 16,
-            borderRadius: (size + 16) / 2,
-            backgroundColor: glowColor,
-          },
-        ]}
-      />
-      <View
-        style={[
-          styles.glowRing2,
-          {
-            width: size + 8,
-            height: size + 8,
-            borderRadius: (size + 8) / 2,
-            backgroundColor: glowColor,
-          },
-        ]}
-      />
-      
-      {/* Glass button */}
       <TouchableOpacity
         onPress={onPress}
         activeOpacity={0.8}
@@ -70,19 +45,6 @@ export function FloatingActionButton({
             end={{ x: 1, y: 1 }}
             style={[styles.gradient, { borderRadius: size / 2 }]}
           >
-            {/* Reflection highlight */}
-            <View
-              style={[
-                styles.reflection,
-                {
-                  width: size * 0.4,
-                  height: size * 0.3,
-                  borderRadius: size * 0.15,
-                },
-              ]}
-            />
-            
-            {/* Border */}
             <View
               style={[
                 styles.border,
@@ -95,15 +57,6 @@ export function FloatingActionButton({
               ]}
             />
             
-            {/* Icon */}
-            <View style={styles.iconContainer}>
-              <Ionicons name={icon} size={size * 0.4} color={glowColor} />
-            </View>
-          </LinearGradient>
-        </BlurView>
-      </TouchableOpacity>
-      
-      {/* Label */}
       {label && (
         <Text style={styles.label}>{label}</Text>
       )}

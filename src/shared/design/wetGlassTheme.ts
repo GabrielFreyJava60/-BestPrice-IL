@@ -1,13 +1,13 @@
 export const WetGlassTheme = {
   colors: {
-    // Background gradients (soft, low-noise)
+    
     background: {
       primary: '#0A0E27',
       secondary: '#1A1F3A',
       gradient: ['#0A0E27', '#1A1F3A', '#2A2F4A'],
     },
     
-    // Neon accents (reflective)
+    
     neon: {
       blue: '#00D9FF',
       cyan: '#00FFFF',
@@ -15,7 +15,7 @@ export const WetGlassTheme = {
       pink: '#FF006E',
     },
     
-    // Glass surfaces
+    
     glass: {
       light: 'rgba(255, 255, 255, 0.1)',
       medium: 'rgba(255, 255, 255, 0.15)',
@@ -24,7 +24,7 @@ export const WetGlassTheme = {
       highlight: 'rgba(255, 255, 255, 0.3)',
     },
     
-    // Text colors
+    
     text: {
       primary: '#FFFFFF',
       secondary: 'rgba(255, 255, 255, 0.8)',
@@ -32,7 +32,7 @@ export const WetGlassTheme = {
       accent: '#00D9FF',
     },
     
-    // Chain colors with neon glow
+    
     chains: {
       shufersal: {
         base: '#0066CC',

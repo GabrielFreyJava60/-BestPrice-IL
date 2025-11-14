@@ -14,7 +14,7 @@ interface RamiLevyResponse {
 
 export const searchRamiLevy = async (query: string): Promise<Product[]> => {
   try {
-    const url = `https://www.rami-levy.co.il/api/catalog/search/${encodeURIComponent(query)}`;
+    const url = `https:
     
     const data = await apiClient.get<RamiLevyResponse>(url);
 

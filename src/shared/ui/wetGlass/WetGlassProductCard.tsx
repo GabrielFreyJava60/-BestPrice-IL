@@ -32,28 +32,8 @@ export function WetGlassProductCard({
     >
       <TouchableOpacity onPress={onPress} activeOpacity={0.9}>
         <View style={styles.content}>
-          {/* Image container with wet glass effect */}
-          <View style={styles.imageContainer}>
-            {product.image ? (
-              <Image source={{ uri: product.image }} style={styles.image} />
-            ) : (
-              <View style={[styles.imagePlaceholder, { backgroundColor: glowColor + '20' }]}>
-                <Ionicons name="cube-outline" size={40} color={glowColor} />
-              </View>
-            )}
-            
-            {/* Glass overlay on image */}
             <View style={styles.imageOverlay} />
             
-            {/* Chain badge */}
-            {showChain && (
-              <View style={styles.badgeContainer}>
-                <ChainBadge chain={product.chain} />
-              </View>
-            )}
-          </View>
-
-          {/* Product info */}
           <View style={styles.info}>
             <Text style={styles.name} numberOfLines={2}>
               {product.name}
@@ -63,18 +43,6 @@ export function WetGlassProductCard({
               <Text style={styles.quantity}>{product.quantity}</Text>
             )}
 
-            {/* Price tag */}
-            <View style={styles.priceContainer}>
-              <WetGlassPriceTag
-                price={product.price}
-                unitPrice={product.unitPrice}
-                glowColor={glowColor}
-                size="medium"
-              />
-            </View>
-          </View>
-
-          {/* Add to cart button */}
           {onAddToCart && (
             <TouchableOpacity
               onPress={onAddToCart}
