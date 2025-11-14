@@ -47,6 +47,17 @@ export function FloatingActionButton({
           >
             <View
               style={[
+                styles.reflection,
+                {
+                  width: size * 0.4,
+                  height: size * 0.3,
+                  borderRadius: size * 0.15,
+                },
+              ]}
+            />
+            
+            <View
+              style={[
                 styles.border,
                 {
                   width: size,
@@ -57,6 +68,13 @@ export function FloatingActionButton({
               ]}
             />
             
+            <View style={styles.iconContainer}>
+              <Ionicons name={icon} size={size * 0.4} color={glowColor} />
+            </View>
+          </LinearGradient>
+        </BlurView>
+      </TouchableOpacity>
+      
       {label && (
         <Text style={styles.label}>{label}</Text>
       )}

@@ -14,7 +14,7 @@ interface VictoryResponse {
 
 export const searchVictory = async (query: string): Promise<Product[]> => {
   try {
-    const url = `https:
+    const url = `https://api.victory.co.il/api/products/search?query=${encodeURIComponent(query)}`;
     
     const data = await apiClient.get<VictoryResponse>(url);
 
