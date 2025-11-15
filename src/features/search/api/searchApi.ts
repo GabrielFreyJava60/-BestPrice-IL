@@ -1,10 +1,13 @@
 import { searchShufersal } from './shufersalApi';
 import { searchRamiLevy } from './ramiLevyApi';
 import { searchVictory } from './victoryApi';
+import { searchYbitan } from './ybitanApi';
+import { searchMega } from './megaApi';
+import { searchTivTaam } from './tivTaamApi';
 import { Product, SearchResult, Chain } from '@/shared/types/product';
 
 export const searchAllChains = async (query: string): Promise<SearchResult[]> => {
-  const chains: Chain[] = ['shufersal', 'ramilevy', 'victory'];
+  const chains: Chain[] = ['shufersal', 'ramilevy', 'victory', 'ybitan', 'mega', 'tivtaam'];
   
   const promises = chains.map(async (chain): Promise<SearchResult> => {
     try {
@@ -19,6 +22,15 @@ export const searchAllChains = async (query: string): Promise<SearchResult[]> =>
           break;
         case 'victory':
           products = await searchVictory(query);
+          break;
+        case 'ybitan':
+          products = await searchYbitan(query);
+          break;
+        case 'mega':
+          products = await searchMega(query);
+          break;
+        case 'tivtaam':
+          products = await searchTivTaam(query);
           break;
       }
 
@@ -40,4 +52,3 @@ export const searchAllChains = async (query: string): Promise<SearchResult[]> =>
 
   return Promise.all(promises);
 };
-

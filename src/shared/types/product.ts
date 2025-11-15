@@ -1,4 +1,10 @@
-export type Chain = 'shufersal' | 'ramilevy' | 'victory';
+export type Chain = 
+  | 'shufersal' 
+  | 'ramilevy' 
+  | 'victory'
+  | 'ybitan'
+  | 'mega'
+  | 'tivtaam';
 
 export interface Product {
   id: string;
@@ -39,15 +45,26 @@ export interface ChainConfig {
 export const CHAIN_CONFIGS: Record<Chain, ChainConfig> = {
   shufersal: {
     name: 'שופרסל',
-    color: '#0066CC',
+    color: '#E30613',
   },
   ramilevy: {
     name: 'רמי לוי',
-    color: '#00A651',
+    color: '#0066CC',
   },
   victory: {
     name: 'ויקטורי',
-    color: '#FF6B35',
+    color: '#00A651',
+  },
+  ybitan: {
+    name: 'יינות ביתן',
+    color: '#8B0000',
+  },
+  mega: {
+    name: 'מגה בעיר',
+    color: '#FF6B00',
+  },
+  tivtaam: {
+    name: 'טיב טעם',
+    color: '#006633',
   },
 };
-
