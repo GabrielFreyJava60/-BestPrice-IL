@@ -72,6 +72,12 @@ export default function RootLayout() {
                 href: null,
               }}
             />
+            <Tabs.Screen
+              name="web"
+              options={{
+                href: null,
+              }}
+            />
           </Tabs>
         </QueryClientProvider>
       </SafeAreaProvider>
