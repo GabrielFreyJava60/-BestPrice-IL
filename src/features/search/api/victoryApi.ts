@@ -24,7 +24,6 @@ export const searchVictory = async (query: string): Promise<Product[]> => {
 
     return normalizeVictoryProducts(data.data);
   } catch (error) {
-    console.warn('Victory API failed, using mock data:', error);
     return getMockVictoryProducts(query);
   }
 };

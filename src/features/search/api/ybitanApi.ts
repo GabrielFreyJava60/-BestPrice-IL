@@ -28,7 +28,6 @@ export const searchYbitan = async (query: string): Promise<Product[]> => {
 
     return normalizeYbitanProducts(data.products);
   } catch (error) {
-    console.warn('Ybitan API failed, using mock data:', error);
     return getMockYbitanProducts(query);
   }
 };

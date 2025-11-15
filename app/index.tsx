@@ -6,6 +6,7 @@ import { BlurView } from 'expo-blur';
 import { SearchBar } from '@/features/search/components/SearchBar';
 import { useRecentSearches } from '@/features/search/store/searchStore';
 import { WetGlassProductCard } from '@/shared/ui/wetGlass/WetGlassProductCard';
+import { DemoDataBanner } from '@/shared/ui/DemoDataBanner';
 
 export default function HomeScreen() {
   const router = useRouter();
@@ -45,6 +46,8 @@ export default function HomeScreen() {
               onSearch={(query) => router.push(`/search?q=${encodeURIComponent(query)}`)}
               placeholder="חפש מוצר..."
             />
+
+            <DemoDataBanner />
 
             {recentSearches.length > 0 && (
               <View style={styles.section}>

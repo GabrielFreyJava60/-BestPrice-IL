@@ -28,7 +28,6 @@ export const searchTivTaam = async (query: string): Promise<Product[]> => {
 
     return normalizeTivTaamProducts(data.data);
   } catch (error) {
-    console.warn('TivTaam API failed, using mock data:', error);
     return getMockTivTaamProducts(query);
   }
 };

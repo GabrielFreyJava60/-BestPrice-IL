@@ -35,7 +35,6 @@ class ApiClient {
       const response = await this.client.get<T>(url, config);
       return response.data;
     } catch (error) {
-      console.error(`GET ${url} failed:`, error);
       throw error;
     }
   }
@@ -45,7 +44,6 @@ class ApiClient {
       const response = await this.client.post<T>(url, data, config);
       return response.data;
     } catch (error) {
-      console.error(`POST ${url} failed:`, error);
       throw error;
     }
   }

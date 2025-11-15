@@ -28,7 +28,6 @@ export const searchMega = async (query: string): Promise<Product[]> => {
 
     return normalizeMegaProducts(data.items);
   } catch (error) {
-    console.warn('Mega API failed, using mock data:', error);
     return getMockMegaProducts(query);
   }
 };

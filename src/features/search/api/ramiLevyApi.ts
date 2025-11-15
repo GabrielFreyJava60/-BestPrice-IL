@@ -24,7 +24,6 @@ export const searchRamiLevy = async (query: string): Promise<Product[]> => {
 
     return normalizeRamiLevyProducts(data.items);
   } catch (error) {
-    console.warn('Rami Levy API failed, using mock data:', error);
     return getMockRamiLevyProducts(query);
   }
 };

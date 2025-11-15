@@ -28,7 +28,6 @@ export const searchShufersal = async (query: string): Promise<Product[]> => {
 
     return normalizeShufersalProducts(data.products);
   } catch (error) {
-    console.warn('Shufersal API failed, using mock data:', error);
     return getMockShufersalProducts(query);
   }
 };
